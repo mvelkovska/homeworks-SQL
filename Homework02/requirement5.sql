@@ -19,8 +19,7 @@ ALTER TABLE [Course] ADD CONSTRAINT [FK_Courses_Student] FOREIGN KEY ([Name]) RE
 --teacher teaches specific courses
 ALTER TABLE [Course] ADD CONSTRAINT [FK_Courses_Teacher] FOREIGN KEY ([Name]) REFERENCES [Teacher]([ID]);
 
---teacher teaches specific students
---ALTER TABLE [Course] ADD CONSTRAINT [FK_Courses_ThatAreTeachedByteacher] FOREIGN KEY ([Name]) REFERENCES [Teacher]([ID]);
+--teacher teaches specific students?
 
 --teacher has access to grades?
 
