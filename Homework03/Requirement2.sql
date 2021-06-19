@@ -31,13 +31,6 @@ GO
 
 --List Student First Name and Last Name next to the other details from previous query
 
-SELECT StudentID, S.FirstName AS [First Name], COUNT(Grade) AS [STUDENT_GRADE_COUNT], AVG(GRADE) AS [STUDENT_AVERAGE_GRADE], 
-MAX(GRADE) AS [STUDENT_MAX_GRADE]
-FROM Grade G
-INNER JOIN Student S on S.ID = G.StudentID
-GROUP BY StudentID,S.FirstName
-HAVING MAX(GRADE) = AVG(GRADE)
-GO
 
 
 SELECT StudentID,S.FirstName + ' ' + S.LastName as [Full Name], COUNT(Grade) AS [STUDENT_GRADE_COUNT], AVG(GRADE) AS [STUDENT_AVERAGE_GRADE], 
