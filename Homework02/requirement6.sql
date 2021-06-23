@@ -1,4 +1,5 @@
 USE [SEDCHome]
+GO
 
 --List all possible combinations of Courses names and AchievementType names that can be passed by student
 
@@ -23,7 +24,7 @@ GO
 
 --List all Students without exam Grade (using Right Join)
 
-SELECT G.*
+SELECT S.*
 FROM Grade G
 RIGHT JOIN Student S ON G.StudentID = S.ID
 WHERE G.StudentID IS NULL
